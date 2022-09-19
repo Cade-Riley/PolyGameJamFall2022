@@ -19,6 +19,6 @@ public class PlayerController : MonoBehaviour
     {
         hInput = Input.GetAxis("Horizontal");
         vInput = Input.GetAxis("Vertical");
-        transform.position = transform.position + new Vector3(hSpeed * hInput * Time.deltaTime, 0, vSpeed * vInput * Time.deltaTime);
+        transform.position += new Vector3(hSpeed * hInput * Time.deltaTime, 0, vSpeed * vInput * Time.deltaTime);
     }
 }
