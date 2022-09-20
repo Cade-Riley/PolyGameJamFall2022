@@ -6,8 +6,6 @@ public class PlayerController : MonoBehaviour
 {
     public float vSpeed = 5;
     public float hSpeed = 5;
-    public GameObject grid;
-    public GameObject grass;
     private float hInput;
     private float vInput;
     private Vector3 direction;
@@ -31,12 +29,7 @@ public class PlayerController : MonoBehaviour
             //transform.rotation = Quaternion.LookRotation(direction);
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 0.15F);
         }
-
-        if (Input.GetButtonDown("Fire1"))
-        {
-            Instantiate(grass, (grid.GetComponent<GridScript>().GetWorldPosition((int)transform.position.x, (int)transform.position.z)), transform.rotation);
-        }
-        //Debug.Log(direction);
+        Debug.Log(direction);
 
         /*
 if (hInput > 0.01)
